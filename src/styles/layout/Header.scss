@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+    height: 15vh;
+
+    & .menu__list {
+        display: flex;
+        gap: 15px;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+}

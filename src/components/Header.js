@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <form className='search__recipe'>
         <input type='text' name='search' placeholder='Buscar receta...' />
       </form>
