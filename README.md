@@ -1,2 +1,1 @@
-# cooking-recipes
-Cooking recipes' personal project 🎉
+# Cooking recipes' personal project
