@@ -6,6 +6,7 @@ const Header = () => {
       <form className='search__recipe'>
         <input type='text' name='search' placeholder='Buscar receta...' />
       </form>
+      <h1 className="header__title">Otro Poquito</h1>
       <nav className='menu'>
         <ul className='menu__list'>
           <li className='menu__list--item1'>
