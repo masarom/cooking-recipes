@@ -1,12 +1,11 @@
 import RecipesArticle from "./RecipeArticle";
 
 const RecipesList = ({recipes}) => {
-    console.log(recipes);
-    const recipesLi = recipes.map((eachRecipe) => {console.log(eachRecipe);return (
+    const recipesLi = recipes.map((eachRecipe) => (
       <li key={eachRecipe.id}>
         <RecipesArticle eachRecipe={eachRecipe} />
       </li>
-)});
+));
   return (
     <ul>
       {recipesLi}

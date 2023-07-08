@@ -4,6 +4,7 @@ const RecipeDetail = () => {
 <h2>Título de la receta</h2>
 <section className="ingredients">
     <h3>Necesitamos</h3>
+    {/* map con el array de ingredientes */}
     <ul>
         <li>ingrediente 1</li>
         <li>ingrediente 2</li>

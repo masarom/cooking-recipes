@@ -1,39 +1,37 @@
 //hooks
 import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 //components
 import Header from './Header';
 import AboutUs from './AboutUs';
 import WeeklyPlanner from './WeeklyPlanner';
-import NewRecipe from './NewRecipe';
+import NewRecipe from './new_recipe/NewRecipe';
 import recipesJSON from '../services/recipes.json';
 ///styles
 import '../styles/App.scss';
 import RecipesList from './RecipesList';
 
 const App = () => {
+  // states
+  // 1 to save all recipes
   const [recipes, setRecipes] = useState(recipesJSON);
-  const [ingrNum, setIngrNum] = useState(0);
-  const [ingrFieldsets, setIngrFielsets] = useState([]);
-
-  //useEffect to control add new ingredients
-
-  useEffect(() => {
-    const fieldsets = [];
-    for(let i = 1; i <= ingrNum; i++) {
-      fieldsets.push(
-          <input type='text' key={i} id={'ingr'+i} placeholder={`Ingrediente ${i}`} />
-      );
+  // 2 to save last input ingredient value
+  const [ingrValueInput, setIngrValueInput] = useState('');
+  // 3 to save ingredients array
+  const [ingredients, setIngredients] = useState([]);
+  // 4 to save last input steps value
+  const [stepValueInput, setStepValueInput] = useState('');
+  // 5 to save recipe steps
+  const [steps, SetSteps] = useState([]);
+  const addIngredientValue = (value) => {
+    setIngrValueInput(value);
+  };
+  const addIngredients = (ingredient) => {
+    if (!ingredients.includes(ingredient)) {
+      ingredients.push(ingredient);
+      setIngredients([...ingredients]);
     }
-    console.log(fieldsets);
-    setIngrFielsets(fieldsets);
-  }, [ingrNum])
-
-  const changeIngrNum = (value) => {
-    const number = parseInt(value);
-    setIngrNum(number);
   }
-
 
   return (
     <>
@@ -44,7 +42,15 @@ const App = () => {
         <Route path='/planificador-semanal' element={<WeeklyPlanner />}></Route>
         <Route
           path='/nueva-receta'
-          element={<NewRecipe ingrNumber={ingrNum} changeIngrNum={changeIngrNum} ingrFieldsets={ingrFieldsets} />}
+          element={
+            <NewRecipe
+              /* one input only */
+              addIngredientValue={addIngredientValue}
+              ingrValueInput={ingrValueInput}
+              addIngredients={addIngredients}
+              ingredients={ingredients}
+            />
+          }
         ></Route>
       </Routes>
     </>
