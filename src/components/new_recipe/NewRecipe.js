@@ -1,7 +1,16 @@
 import '../../styles/layout/NewRecipe.scss';
 import NewRecipePreview from './NewRecipePreview';
 
-const NewRecipe = ({ ingrNum, changeIngrNum, ingrInput, addIngredientValue, addIngredients, ingrValueInput, ingredients }) => {
+const NewRecipe = ({
+  addIngredientValue,
+  addIngredients,
+  ingrValueInput,
+  ingredients,
+  addStepValue,
+  stepValueInput,
+  addSteps,
+  steps
+}) => {
   // gathers input value and stores it in ingrValueInput (4)
   const handleChangeIngredient = (ev) => {
     return addIngredientValue(ev.target.value);
@@ -12,6 +21,15 @@ const NewRecipe = ({ ingrNum, changeIngrNum, ingrInput, addIngredientValue, addI
     return addIngredients(ingrValueInput);
   };
 
+  const handleChangeStep = (ev) => {
+    return addStepValue(ev.target.value);
+  };
+
+  const handleClickAddStep = (ev) => {
+    ev.preventDefault();
+    return addSteps(stepValueInput);
+  };
+
   return (
     <>
       <form>
@@ -20,12 +38,13 @@ const NewRecipe = ({ ingrNum, changeIngrNum, ingrInput, addIngredientValue, addI
           Escriba el ingrediente deseado, pulse el botón de "añadir" y mire cómo aparece en la sección de ingredientes
           de su receta. Repita el proceso para todos los ingredientes
         </p>
-        {/* <fieldset>
-        <label htmlFor='ingredientCount'>¿Cuántos ingredientes tiene tu receta?</label>
-        <input type='number' id='ingredientCount' placeholder='ej: 4' value={ingrNum} onChange={handleIngrNum} />
-      </fieldset> */}
         <fieldset className='form__ingredient--item'>
-          <input type='text' placeholder='ej: 1 kg de patatas' onChange={handleChangeIngredient} />
+          <input
+            type='text'
+            placeholder='ej: 1 kg de patatas'
+            onChange={handleChangeIngredient}
+            value={ingrValueInput}
+          />
           <button onClick={handleClickAddIngredient}>Añadir</button>
         </fieldset>
         {/* <fieldset className='form__ingredient--item'>
@@ -63,10 +82,20 @@ const NewRecipe = ({ ingrNum, changeIngrNum, ingrInput, addIngredientValue, addI
         <label htmlFor='preparationNotes'>Preparación previa (opcional)</label>
         <input type='text' name='preparationNotes' id='preparationNotes' placeholder='ej: triturado' />
       </fieldset> */}
-      
-
+        <fieldset>
+          <textarea
+            name='step'
+            id='step'
+            cols='40'
+            rows='10'
+            placeholder='Lavamos todas las verduras y...'
+            value={stepValueInput}
+            onChange={handleChangeStep}
+          ></textarea>
+          <button onClick={handleClickAddStep}>Añadir</button>
+        </fieldset>
       </form>
-      <NewRecipePreview ingredients={ingredients}/>
+      <NewRecipePreview ingredients={ingredients} steps={steps} />
     </>
   );
 };

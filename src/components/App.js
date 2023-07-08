@@ -22,7 +22,9 @@ const App = () => {
   // 4 to save last input steps value
   const [stepValueInput, setStepValueInput] = useState('');
   // 5 to save recipe steps
-  const [steps, SetSteps] = useState([]);
+  const [steps, setSteps] = useState([]);
+
+  //New recipe INGREDIENTS
   const addIngredientValue = (value) => {
     setIngrValueInput(value);
   };
@@ -30,6 +32,17 @@ const App = () => {
     if (!ingredients.includes(ingredient)) {
       ingredients.push(ingredient);
       setIngredients([...ingredients]);
+    }
+  }
+  // New Recipe STEPS
+  const addStepValue = (value) => {
+    setStepValueInput(value)
+  }
+
+  const addSteps = (step) => {
+    if (!steps.includes(step)) {
+      steps.push(step);
+      setSteps([...steps]);
     }
   }
 
@@ -49,6 +62,10 @@ const App = () => {
               ingrValueInput={ingrValueInput}
               addIngredients={addIngredients}
               ingredients={ingredients}
+              addStepValue={addStepValue}
+              stepValueInput={stepValueInput}
+              addSteps={addSteps}
+              steps={steps}
             />
           }
         ></Route>
