@@ -27,7 +27,9 @@ const App = () => {
   const [newTitle, setNewTitle] = useState('');
   // 7 to save initial comment
   const [initialComment, setInitialComment] = useState('');
-  // 8 Add new Recipe
+  // 8 to save Image 
+  const [newImage, setNewImage] = useState('');
+  // 9 Add new Recipe
   const [newRecipe, setNewRecipe] = useState({
     id: '',
     title: '',
@@ -73,12 +75,19 @@ const App = () => {
   const addInitialComment = (comment) => {
     setInitialComment(comment);
   }
+
+  // new IMAGE (url)
+  const addNewImage = (image) => {
+    setNewImage(image);
+  };
+
   // Add NEW RECIPE
   const addNewRecipe = () => {
     const clonedNewRecipe = {
       ...newRecipe,
       title: newTitle,
       initialComment: initialComment,
+      image: newImage,
       ingredients: { rawList: ingredients },
       elaboration: { steps: steps },
     };
@@ -112,6 +121,8 @@ const App = () => {
               newTitle={newTitle}
               addInitialComment={addInitialComment}
               initialComment={initialComment}
+              addNewImage={addNewImage}
+              newImage={newImage}
             />
           }
         ></Route>

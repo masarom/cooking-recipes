@@ -2,6 +2,10 @@ import '../../styles/layout/NewRecipe.scss';
 import NewRecipePreview from './NewRecipePreview';
 
 const NewRecipe = ({
+  addNewTitle,
+  newTitle,
+  addInitialComment,
+  initialComment,
   addIngredientValue,
   addIngredients,
   ingrValueInput,
@@ -10,12 +14,10 @@ const NewRecipe = ({
   stepValueInput,
   addSteps,
   steps,
-  addNewRecipe,
   recipes,
-  addNewTitle,
-  newTitle,
-  addInitialComment,
-  initialComment,
+  addNewRecipe,
+  addNewImage,
+  newImage,
 }) => {
   // gathers input value and stores it in ingrValueInput (4)
   const handleChangeIngredient = (ev) => {
@@ -44,6 +46,10 @@ const NewRecipe = ({
     addInitialComment(ev.target.value);
   };
 
+  const handleChangeImage = (ev) => {
+    addNewImage(ev.target.value);
+  };
+
   const handleClickAddRecipe = (ev) => {
     ev.preventDefault();
     return addNewRecipe();
@@ -70,6 +76,9 @@ const NewRecipe = ({
             value={initialComment}
             onInput={handleChangeInitialComment}
           ></textarea>
+        </fieldset>
+        <fieldset>
+          <input type='url' name='image' id='image' placeholder='Ej: https://google.es' value={newImage} onInput={handleChangeImage} />
         </fieldset>
         <h2>Ingredientes</h2>
         <p>

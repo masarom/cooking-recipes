@@ -6,13 +6,13 @@
     "initialComment": "Popular postre italiano que todo el mundo conoce. A nosotros nos gusta mucho, y además lo que no te comas lo puedes guardar en el congelador y sacarlo cuando lo necesites.",
     "ingredients": {
       "rawList": [
-        { "id": 1, "product": "6 huevos" },
-        { "id": 2, "product": "125 gr de azúcar" },
-        { "id": 3, "product": "500 gr de queso mascarpone" },
-        { "id": 4, "product": "300 gr de bizcochos de soletilla" },
-        { "id": 5, "product": "250 ml de café recién hecho" },
-        { "id": 6, "product": "50 ml de ron añejo (Si lo van a comer niños no echaremos el ron)" },
-        { "id": 7, "product": "Cacao en polvo" }
+        "6 huevos",
+        "125 gr de azúcar",
+        "500 gr de queso mascarpone",
+        "300 gr de bizcochos de soletilla",
+        "250 ml de café recién hecho",
+        "50 ml de ron añejo (Si lo van a comer niños no echaremos el ron)",
+        "Cacao en polvo"
       ],
       "parsed": [
         {
@@ -75,45 +75,15 @@
     },
     "elaboration": {
       "steps": [
-        {
-          "stepNumber": 1,
-          "desc": "Hacemos el café, más bien cargado. Lo ponemos en un bol o plato y le añadimos el ron. Dejamos enfriar."
-        },
-        {
-          "stepNumber": 2,
-          "desc": "Separamos las claras de las yemas y las ponemos en boles diferentes. Las claras las metemos en la nevera para que se mantengan frías, y las yemas las batimos junto con el azúcar, ayudados de unas varillas eléctricas, hasta que blanqueen y formen una crema amarilla clara."
-        },
-
-        {
-          "stepNumber": 3,
-          "desc": "Le agregamos el mascarpone y volvemos a mezclar bien con las varillas hasta que quede una crema homogénea."
-        },
-
-        {
-          "stepNumber": 4,
-          "desc": "Cogemos las claras de la nevera, añadimos una pizca de sal y las montamos bien a punto de nieve ayudados de nuevo por las varillas eléctricas. Tiene que quedar con una buena consistencia."
-        },
-
-        {
-          "stepNumber": 5,
-          "desc": "Añadimos las claras, poco a poco, al bol de la crema del queso mascarpone, con movimientos envolventes y con suavidad para que no se bajen las claras montadas. Mezclamos bien hasta que quede una crema uniforme."
-        },
-
-        {
-          "stepNumber": 6,
-          "desc": "Montamos el tiramisú: En un bol rectangular ponemos una capa de los bizcocho de soletilla mojados en el café, y con la parte que tiene el azúcar hacia abajo. Encima echamos una capa abundante de la crema preparada. Espolvoreamos cacao en polvo por encima."
-        },
-        {
-          "stepNumber": 7,
-          "desc": "A continuación ponemos otra capa de bizcocho de soletilla empapado de la mezcla de café y ron. Encima otra capa generosa de la crema de queso mascarpone y terminamos espolvoreando una buena capa de cacao en polvo."
-        },
-
-        { "stepNumber": 8, "desc": "Y listo…" },
-
-        {
-          "stepNumber": 9,
-          "desc": "Si lo vamos a comer en unas horas mejor lo metemos al congelador para que se endurezca un poco. Y si no, lo ponemos en la parte más fría de la nevera. Yo siempre lo meto al congelador y lo saco un poco antes de comerlo porque nos gusta más bien helado."
-        }
+        "Hacemos el café, más bien cargado. Lo ponemos en un bol o plato y le añadimos el ron. Dejamos enfriar.",
+        "Separamos las claras de las yemas y las ponemos en boles diferentes. Las claras las metemos en la nevera para que se mantengan frías, y las yemas las batimos junto con el azúcar, ayudados de unas varillas eléctricas, hasta que blanqueen y formen una crema amarilla clara.",
+        "Le agregamos el mascarpone y volvemos a mezclar bien con las varillas hasta que quede una crema homogénea.",
+        "Cogemos las claras de la nevera, añadimos una pizca de sal y las montamos bien a punto de nieve ayudados de nuevo por las varillas eléctricas. Tiene que quedar con una buena consistencia.",
+        "Añadimos las claras, poco a poco, al bol de la crema del queso mascarpone, con movimientos envolventes y con suavidad para que no se bajen las claras montadas. Mezclamos bien hasta que quede una crema uniforme.",
+        "Montamos el tiramisú: En un bol rectangular ponemos una capa de los bizcocho de soletilla mojados en el café, y con la parte que tiene el azúcar hacia abajo. Encima echamos una capa abundante de la crema preparada. Espolvoreamos cacao en polvo por encima.",
+        "A continuación ponemos otra capa de bizcocho de soletilla empapado de la mezcla de café y ron. Encima otra capa generosa de la crema de queso mascarpone y terminamos espolvoreando una buena capa de cacao en polvo.",
+        "Y listo…",
+        "Si lo vamos a comer en unas horas mejor lo metemos al congelador para que se endurezca un poco. Y si no, lo ponemos en la parte más fría de la nevera. Yo siempre lo meto al congelador y lo saco un poco antes de comerlo porque nos gusta más bien helado."
       ],
       "finalQuote": "¡Que aproveche!"
     }
@@ -125,16 +95,16 @@
     "initialComment": "Esta es una receta de las más sanas que conozco, sin apenas grasas, muy ligera y fácil de preparar, que es lo que interesa. Y encima está buena, se puede pedir más?",
     "ingredients": {
       "rawList": [
-        { "id": 1, "product": "1 kg. de calabaza (para 3 personas)" },
-        { "id": 2, "product": "1 puerro mediano" },
-        { "id": 3, "product": "1 patata mediana" },
-        { "id": 4, "product": "1 zanahoria" },
-        { "id": 5, "product": "1 cebolla pequeña" },
-        { "id": 6, "product": "Aceite de oliva virgen extra" },
-        { "id": 7, "product": "Agua caliente" },
-        { "id": 8, "product": "Nuez moscada" },
-        { "id": 9, "product": "Pimienta negra recién molida" },
-        { "id": 10, "product": "Sal" }
+        "1 kg. de calabaza (para 3 personas)",
+        "1 puerro mediano",
+        "1 patata mediana",
+        "1 zanahoria",
+        "1 cebolla pequeña",
+        "Aceite de oliva virgen extra",
+        "Agua caliente",
+        "Nuez moscada",
+        "Pimienta negra recién molida",
+        "Sal"
       ],
       "parsed": [
         {
@@ -221,58 +191,17 @@
     },
     "elaboration": {
       "steps": [
-        {
-          "stepNumber": 1,
-          "desc": "Pelamos, cortamos y quitamos lo verde al puerro. Lavamos y troceamos lo blanco."
-        },
-        {
-          "stepNumber": 2,
-          "desc": "Pelamos y picamos la cebolla."
-        },
-
-        {
-          "stepNumber": 3,
-          "desc": "Pelamos, lavamos y troceamos la zanahoria."
-        },
-
-        {
-          "stepNumber": 4,
-          "desc": "Pelamos, lavamos y partimos la patata en cuadrados."
-        },
-
-        {
-          "stepNumber": 5,
-          "desc": "Pelamos la calabaza y reservamos un cuarto de ella para preparar unos taquitos salteados de acompañamiento. Troceamos el resto."
-        },
-
-        {
-          "stepNumber": 6,
-          "desc": "En una olla ponemos 4 cucharadas soperas de aceite a calentar a fuego medio y añadimos todas las verduras que habíamos preparado menos el cuarto de calabaza que utilizaremos más tarde. Echamos una cucharadita de sal y rehogamos 10 minutos removiendo de vez en cuando."
-        },
-        {
-          "stepNumber": 7,
-          "desc": "A continuación echamos el agua caliente necesaria hasta cubrir la verduras o un poco menos. Tapamos y dejamos cocer a fuego medio-alto hasta que la calabaza esté tierna. Removemos de vez en cuando."
-        },
-
-        {
-          "stepNumber": 8,
-          "desc": "Mientras tanto, troceamos en cuadraditos pequeños de 1 cm el cuarto de calabaza que teníamos reservada. En una sartén antiadherente ponemos una cucharada de aceite y los taquitos de calabaza a fuego medio. Removemos para que se dore por todos lados y le añadimos una pizca de sal, otra de pimienta y otra de nuez moscada. Reservamos."
-        },
-
-        {
-          "stepNumber": 9,
-          "desc": "Cuando la calabaza de la olla esté tierna (unos 15 minutos) echamos un poco de pimienta, un poco de nuez moscada y batimos con la batidora hasta que quede una crema fina. Probamos el punto de sal y lista."
-        },
-
-        {
-          "stepNumber": 10,
-          "desc": "Servimos en un plato acompañado con un poco de los taquitos de calabaza rehogados en el centro."
-        },
-
-        {
-          "stepNumber": 11,
-          "desc": "NOTA: Podemos añadirle 4 quesitos en porciones que pondremos y trituraremos cuando la calabaza esté lista. Quedará más cremosa y sabrosa, aunque menos light. A nosotros nos gusta más con los quesitos."
-        }
+        "Pelamos, cortamos y quitamos lo verde al puerro. Lavamos y troceamos lo blanco.",
+        "Pelamos y picamos la cebolla.",
+        "Pelamos, lavamos y troceamos la zanahoria.",
+        "Pelamos, lavamos y partimos la patata en cuadrados.",
+        "Pelamos la calabaza y reservamos un cuarto de ella para preparar unos taquitos salteados de acompañamiento. Troceamos el resto.",
+        "En una olla ponemos 4 cucharadas soperas de aceite a calentar a fuego medio y añadimos todas las verduras que habíamos preparado menos el cuarto de calabaza que utilizaremos más tarde. Echamos una cucharadita de sal y rehogamos 10 minutos removiendo de vez en cuando.",
+        "A continuación echamos el agua caliente necesaria hasta cubrir la verduras o un poco menos. Tapamos y dejamos cocer a fuego medio-alto hasta que la calabaza esté tierna. Removemos de vez en cuando.",
+        "Mientras tanto, troceamos en cuadraditos pequeños de 1 cm el cuarto de calabaza que teníamos reservada. En una sartén antiadherente ponemos una cucharada de aceite y los taquitos de calabaza a fuego medio. Removemos para que se dore por todos lados y le añadimos una pizca de sal, otra de pimienta y otra de nuez moscada. Reservamos.",
+        "Cuando la calabaza de la olla esté tierna (unos 15 minutos) echamos un poco de pimienta, un poco de nuez moscada y batimos con la batidora hasta que quede una crema fina. Probamos el punto de sal y lista.",
+        "Servimos en un plato acompañado con un poco de los taquitos de calabaza rehogados en el centro.",
+        "NOTA: Podemos añadirle 4 quesitos en porciones que pondremos y trituraremos cuando la calabaza esté lista. Quedará más cremosa y sabrosa, aunque menos light. A nosotros nos gusta más con los quesitos."
       ],
       "finalQuote": "¡Que aproveche!"
     }
