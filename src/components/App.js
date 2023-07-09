@@ -23,6 +23,24 @@ const App = () => {
   const [stepValueInput, setStepValueInput] = useState('');
   // 5 to save recipe steps
   const [steps, setSteps] = useState([]);
+  // 6 to save recipe title
+  const [newTitle, setNewTitle] = useState('');
+  // 7 to save initial comment
+  const [initialComment, setInitialComment] = useState('');
+  // 8 Add new Recipe
+  const [newRecipe, setNewRecipe] = useState({
+    id: '',
+    title: '',
+    image: '',
+    initialComment: '',
+    ingredients: {
+      rawList: [],
+    },
+    elaboration: {
+      steps: [],
+    },
+    finalQuote: '¡Que aproveche!',
+  });
 
   //New recipe INGREDIENTS
   const addIngredientValue = (value) => {
@@ -30,21 +48,43 @@ const App = () => {
   };
   const addIngredients = (ingredient) => {
     if (!ingredients.includes(ingredient)) {
-      ingredients.push(ingredient);
-      setIngredients([...ingredients]);
+      const clonedIngredients = [...ingredients];
+      clonedIngredients.push(ingredient);
+      setIngredients(clonedIngredients);
     }
-  }
+  };
   // New Recipe STEPS
   const addStepValue = (value) => {
-    setStepValueInput(value)
-  }
+    setStepValueInput(value);
+  };
 
   const addSteps = (step) => {
     if (!steps.includes(step)) {
-      steps.push(step);
-      setSteps([...steps]);
+      const clonedSteps = [...steps];
+      clonedSteps.push(step);
+      setSteps(clonedSteps);
     }
+  };
+  // new TITLE 
+  const addNewTitle = (title) => {
+    setNewTitle(title);
   }
+  // new INITIAL COMMENT
+  const addInitialComment = (comment) => {
+    setInitialComment(comment);
+  }
+  // Add NEW RECIPE
+  const addNewRecipe = () => {
+    const clonedNewRecipe = {
+      ...newRecipe,
+      title: newTitle,
+      initialComment: initialComment,
+      ingredients: { rawList: ingredients },
+      elaboration: { steps: steps },
+    };
+    setNewRecipe(clonedNewRecipe);
+    setRecipes([...recipes, clonedNewRecipe])
+  };
 
   return (
     <>
@@ -66,6 +106,12 @@ const App = () => {
               stepValueInput={stepValueInput}
               addSteps={addSteps}
               steps={steps}
+              addNewRecipe={addNewRecipe}
+              recipes={recipes}
+              addNewTitle={addNewTitle}
+              newTitle={newTitle}
+              addInitialComment={addInitialComment}
+              initialComment={initialComment}
             />
           }
         ></Route>

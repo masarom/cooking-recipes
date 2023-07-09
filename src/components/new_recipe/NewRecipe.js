@@ -9,7 +9,13 @@ const NewRecipe = ({
   addStepValue,
   stepValueInput,
   addSteps,
-  steps
+  steps,
+  addNewRecipe,
+  recipes,
+  addNewTitle,
+  newTitle,
+  addInitialComment,
+  initialComment,
 }) => {
   // gathers input value and stores it in ingrValueInput (4)
   const handleChangeIngredient = (ev) => {
@@ -30,17 +36,51 @@ const NewRecipe = ({
     return addSteps(stepValueInput);
   };
 
+  const hangleChangeTitle = (ev) => {
+    addNewTitle(ev.target.value);
+  };
+
+  const handleChangeInitialComment = (ev) => {
+    addInitialComment(ev.target.value);
+  };
+
+  const handleClickAddRecipe = (ev) => {
+    ev.preventDefault();
+    return addNewRecipe();
+  };
+
   return (
     <>
-      <form>
+      <form onSubmit={handleClickAddRecipe}>
+        <h2>Título</h2>
+        <fieldset>
+          <input
+            type='text'
+            name='title'
+            placeholder='Título de la receta'
+            value={newTitle}
+            onInput={hangleChangeTitle}
+          />
+          <textarea
+            name='initialComment'
+            id='initialComment'
+            cols='40'
+            rows='5'
+            placeholder='Comentario inicial. Ej: Esta receta, me la enseñó mi madre'
+            value={initialComment}
+            onInput={handleChangeInitialComment}
+          ></textarea>
+        </fieldset>
         <h2>Ingredientes</h2>
         <p>
           Escriba el ingrediente deseado, pulse el botón de "añadir" y mire cómo aparece en la sección de ingredientes
           de su receta. Repita el proceso para todos los ingredientes
         </p>
+
         <fieldset className='form__ingredient--item'>
           <input
             type='text'
+            name='ingredient'
             placeholder='ej: 1 kg de patatas'
             onChange={handleChangeIngredient}
             value={ingrValueInput}
@@ -94,8 +134,9 @@ const NewRecipe = ({
           ></textarea>
           <button onClick={handleClickAddStep}>Añadir</button>
         </fieldset>
+        <button type='submit'>Añadir receta</button>
       </form>
-      <NewRecipePreview ingredients={ingredients} steps={steps} />
+      <NewRecipePreview ingredients={ingredients} steps={steps} newTitle={newTitle} initialComment={initialComment} />
     </>
   );
 };

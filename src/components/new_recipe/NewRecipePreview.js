@@ -1,7 +1,7 @@
 import NewRecipeIngredients from './NewRecipeIngredients';
 import NewRecipeSteps from './NewRecipeSteps';
 
-const NewRecipePreview = ({ ingredients, steps }) => {
+const NewRecipePreview = ({ ingredients, steps, newTitle, initialComment }) => {
   const ingredientsLi = ingredients.map((eachIngr, i) => (
     <li key={i} id={i + 1} className='ingredient__list--item'>
       <NewRecipeIngredients eachIngr={eachIngr} />
@@ -15,6 +15,8 @@ const NewRecipePreview = ({ ingredients, steps }) => {
   ));
   return (
     <section className='recipe__preview'>
+      <h2 className='title'>{newTitle}</h2>
+      <p>{initialComment}</p>
       <article className='recipe__preview--ingredients'>
         <h2>Ingredientes</h2>
         <ul className='ingredient__list'>{ingredientsLi}</ul>
