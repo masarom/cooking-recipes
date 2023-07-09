@@ -1,5 +1,5 @@
 //hooks
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation, matchPath } from 'react-router-dom';
 import { useState } from 'react';
 //components
 import Header from './Header';
@@ -10,6 +10,7 @@ import recipesJSON from '../services/recipes.json';
 ///styles
 import '../styles/App.scss';
 import RecipesList from './RecipesList';
+import RecipeDetail from './RecipeDetail';
 
 const App = () => {
   // states
@@ -85,6 +86,7 @@ const App = () => {
   const addNewRecipe = () => {
     const clonedNewRecipe = {
       ...newRecipe,
+      id: crypto.randomUUID(),
       title: newTitle,
       initialComment: initialComment,
       image: newImage,
@@ -95,6 +97,13 @@ const App = () => {
     setRecipes([...recipes, clonedNewRecipe])
   };
 
+  // DYMANIC ROUTEs for RecipeDetail
+  const { pathname } = useLocation();
+  const routeData = matchPath('receta/:recipeId', pathname);
+
+  const recipeId = routeData?.params.recipeId;
+  const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === parseInt(recipeId))
+  console.log(findRecipe);
   return (
     <>
       <Header />
@@ -126,6 +135,7 @@ const App = () => {
             />
           }
         ></Route>
+        <Route path='receta/:recipeId' element={<RecipeDetail findRecipe={findRecipe} />}></Route>
       </Routes>
     </>
   );
