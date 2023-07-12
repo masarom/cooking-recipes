@@ -115,11 +115,13 @@ const App = () => {
     setRecipes([...recipes, clonedNewRecipe]);
   };
 
-  // DYMANIC ROUTEs for RecipeDetail
+  // DYMANIC ROUTES for RecipeDetail
   const { pathname } = useLocation();
   const routeData = matchPath('receta/:recipeId', pathname);
+  console.log(routeData);
   const recipeId = routeData?.params.recipeId;
-  const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === parseInt(recipeId));
+  const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === recipeId);
+  console.log(findRecipe);
 
   return (
     <>
