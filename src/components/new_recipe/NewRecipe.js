@@ -18,6 +18,8 @@ const NewRecipe = ({
   addNewRecipe,
   addNewImage,
   newImage,
+  updateIngredients,
+  updateSteps,
 }) => {
   // gathers input value and stores it in ingrValueInput (4)
   const handleChangeIngredient = (ev) => {
@@ -72,13 +74,20 @@ const NewRecipe = ({
             id='initialComment'
             cols='40'
             rows='5'
-            placeholder='Comentario inicial. Ej: Esta receta, me la enseñó mi madre'
+            placeholder='Comentario inicial. Ej: Esta receta me la enseñó mi madre'
             value={initialComment}
             onInput={handleChangeInitialComment}
           ></textarea>
         </fieldset>
         <fieldset>
-          <input type='url' name='image' id='image' placeholder='Ej: https://google.es' value={newImage} onInput={handleChangeImage} />
+          <input
+            type='url'
+            name='image'
+            id='image'
+            placeholder='Ej: https://google.es'
+            value={newImage}
+            onInput={handleChangeImage}
+          />
         </fieldset>
         <h2>Ingredientes</h2>
         <p>
@@ -145,7 +154,14 @@ const NewRecipe = ({
         </fieldset>
         <button type='submit'>Añadir receta</button>
       </form>
-      <NewRecipePreview ingredients={ingredients} steps={steps} newTitle={newTitle} initialComment={initialComment} />
+      <NewRecipePreview
+        ingredients={ingredients}
+        steps={steps}
+        newTitle={newTitle}
+        initialComment={initialComment}
+        updateIngredients={updateIngredients}
+        updateSteps={updateSteps}
+      />
     </>
   );
 };

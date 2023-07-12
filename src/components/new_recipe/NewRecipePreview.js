@@ -1,16 +1,15 @@
 import NewRecipeIngredients from './NewRecipeIngredients';
 import NewRecipeSteps from './NewRecipeSteps';
 
-const NewRecipePreview = ({ ingredients, steps, newTitle, initialComment }) => {
+const NewRecipePreview = ({ ingredients, steps, newTitle, initialComment, updateIngredients, updateSteps }) => {
   const ingredientsLi = ingredients.map((eachIngr, i) => (
     <li key={i} id={i + 1} className='ingredient__list--item'>
-      <NewRecipeIngredients eachIngr={eachIngr} />
+      <NewRecipeIngredients eachIngr={eachIngr} ingredients={ingredients} updateIngredients={updateIngredients} />
     </li>
   ));
-
   const stepsLi = steps.map((eachStep, i) => (
     <li key={i} id={i + 1} className='step__list--item'>
-      <NewRecipeSteps eachStep={eachStep} />
+      <NewRecipeSteps eachStep={eachStep} steps={steps} updateSteps={updateSteps} />
     </li>
   ));
   return (

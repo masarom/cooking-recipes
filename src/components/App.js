@@ -28,7 +28,7 @@ const App = () => {
   const [newTitle, setNewTitle] = useState('');
   // 7 to save initial comment
   const [initialComment, setInitialComment] = useState('');
-  // 8 to save Image 
+  // 8 to save Image
   const [newImage, setNewImage] = useState('');
   // 9 Add new Recipe
   const [newRecipe, setNewRecipe] = useState({
@@ -56,9 +56,27 @@ const App = () => {
       setIngredients(clonedIngredients);
     }
   };
+  // update Ingredients
+  const updateIngredients = (index) => {
+    if (index !== -1) {
+      const clonedIngr = [...ingredients];
+      clonedIngr.splice(index, 1);
+      setIngredients(clonedIngr);
+    }
+  };
+
   // New Recipe STEPS
   const addStepValue = (value) => {
     setStepValueInput(value);
+  };
+
+  // update Steps
+  const updateSteps = (index) => {
+    if (index !== -1) {
+      const clonedSteps = [...steps];
+      clonedSteps.splice(index, 1);
+      setSteps(clonedSteps);
+    }
   };
 
   const addSteps = (step) => {
@@ -68,14 +86,14 @@ const App = () => {
       setSteps(clonedSteps);
     }
   };
-  // new TITLE 
+  // new TITLE
   const addNewTitle = (title) => {
     setNewTitle(title);
-  }
+  };
   // new INITIAL COMMENT
   const addInitialComment = (comment) => {
     setInitialComment(comment);
-  }
+  };
 
   // new IMAGE (url)
   const addNewImage = (image) => {
@@ -94,16 +112,15 @@ const App = () => {
       elaboration: { steps: steps },
     };
     setNewRecipe(clonedNewRecipe);
-    setRecipes([...recipes, clonedNewRecipe])
+    setRecipes([...recipes, clonedNewRecipe]);
   };
 
   // DYMANIC ROUTEs for RecipeDetail
   const { pathname } = useLocation();
   const routeData = matchPath('receta/:recipeId', pathname);
-
   const recipeId = routeData?.params.recipeId;
-  const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === parseInt(recipeId))
-  console.log(findRecipe);
+  const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === parseInt(recipeId));
+
   return (
     <>
       <Header />
@@ -132,6 +149,8 @@ const App = () => {
               initialComment={initialComment}
               addNewImage={addNewImage}
               newImage={newImage}
+              updateIngredients={updateIngredients}
+              updateSteps={updateSteps}
             />
           }
         ></Route>
