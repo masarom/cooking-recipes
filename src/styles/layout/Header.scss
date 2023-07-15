@@ -1,18 +1,6 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 15px;
-    height: 15vh;
+@import '../core/Var';
 
-    & .menu__list {
-        display: flex;
-        gap: 15px;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-    }
-    &__title {
-        font-family: $primary-title;
-        font-size: 3rem;
-    }
+.menu__item {
+    text-decoration: none;
+    color: $white;
 }
