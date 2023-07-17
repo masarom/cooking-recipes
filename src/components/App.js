@@ -12,6 +12,7 @@ import RecipeDetail from './RecipeDetail';
 ///styles
 import '../styles/App.scss';
 import Footer from './Footer';
+import Hero from './Hero';
 
 const App = () => {
   // states
@@ -125,9 +126,17 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className='main'>
         <Routes>
-          <Route path='/' element={<RecipesList recipes={recipes} />}></Route>
+          <Route
+            path='/'
+            element={
+              <>
+                <Hero />
+                <RecipesList recipes={recipes} />
+              </>
+            }
+          ></Route>
           <Route path='/quienes-somos' element={<AboutUs />}></Route>
           <Route path='/planificador-semanal' element={<WeeklyPlanner />}></Route>
           <Route

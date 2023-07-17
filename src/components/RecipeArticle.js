@@ -3,12 +3,13 @@ import '../styles/layout/RecipeArticle.scss';
 
 const RecipesArticle = ({eachRecipe}) => {
   return (
-    <Link to={'receta/' + eachRecipe.id}>
-    <article>
-      <img src={eachRecipe.image} alt={`foto de ${eachRecipe.title}`} className="recipe__image"/>
-      <h2>{eachRecipe.title}</h2>
-      <p>{eachRecipe.initialComment}</p>
-    </article>
+    <Link to={'receta/' + eachRecipe.id} className='recipe__link'>
+      <article className='recipe__article'>
+        <div className='recipe__article--image' style={{ backgroundImage: `url(${eachRecipe.image})` }}></div>
+        {/* <img src={eachRecipe.image} alt={`foto de ${eachRecipe.title}`} className='recipe__article--image' /> */}
+        <h2 className='recipe__article--title'>{eachRecipe.title}</h2>
+        <p className='recipe__article--excerpt'>{eachRecipe.initialComment}</p>
+      </article>
     </Link>
   );
 };

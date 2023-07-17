@@ -17,19 +17,18 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-/* const Header = () => { */
 const drawerWidth = 240;
 const theme = createTheme({
   palette: {
     primary: {
       light: '#c62f38',
-      main: '#3d405b',
-      dark: '#c62f38',
+      main: '#c62f38',
+      dark: '#3d405b',
       contrastText: '#fff',
     },
   },
 });
-
+// menu items and links
 const navItems = ['Inicio', 'Quiénes somos', 'Planificador semanal', 'Añadir nueva'];
 const navLinks = ['/', '/quienes-somos', '/planificador-semanal', '/nueva-receta'];
 
@@ -44,9 +43,19 @@ function Header(props) {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', height: '100vh' }}
+      sx={{ textAlign: 'center', bgcolor: 'primary.light', color: 'primary.contrastText', height: '100vh' }}
     >
-      <Typography variant='h4' sx={{ my: 2, fontFamily: 'Rancho, Roboto', fontSize: 34 }}>
+      <Typography
+        variant='h4'
+        sx={{
+          my: 2,
+          fontFamily: 'Rancho, Roboto',
+          fontSize: 34,
+          margin: 0,
+          padding: '16px 0',
+          backgroundColor: 'primary.light',
+        }}
+      >
         <Link className='menu__item' to='/'>
           Otro Poquito
         </Link>
@@ -73,7 +82,7 @@ function Header(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', paddingBottom: 1 }}>
         <CssBaseline />
         {/* Tablet & desktop version */}
         <AppBar component='nav'>
@@ -83,17 +92,25 @@ function Header(props) {
               aria-label='open drawer'
               edge='start'
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+              sx={{ mr: 2, display: { sm: 'none' }, '& .MuiSvgIcon-fontSizeMedium': { width: 30, height: 30 } }}
             >
               <MenuIcon />
             </IconButton>
             <Typography
               variant='h3'
               component='div'
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontFamily: 'Rancho, Roboto', width: 150 } }}
+              sx={{
+                flexGrow: 1,
+                display: {
+                  xs: 'none',
+                  sm: 'block',
+                  fontFamily: 'Rancho, Roboto',
+                  width: 150,
+                },
+              }}
             >
               <Link className='menu__item' to='/'>
-              Otro Poquito
+                Otro Poquito
               </Link>
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block', paddingLeft: 54 } }}>
@@ -123,7 +140,7 @@ function Header(props) {
             {drawer}
           </Drawer>
         </Box>
-        <Box component='main' sx={{ p: 5 }}></Box>
+        <Box component='main' sx={{ p: 3 }}></Box>
       </Box>
     </ThemeProvider>
   );

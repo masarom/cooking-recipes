@@ -1,0 +1,63 @@
+@import '../core/Var';
+
+.hero {
+  background-color: rgba(0, 0, 0, 0.45);
+  background-image: url('../../images/hero.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  min-height: 35vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 10px;
+  @media all and (min-width:1024px){
+    min-height: 42vh;
+  }
+  &__title {
+    font-size: 4rem;
+    font-family: 'Rancho', sans-serif;
+    text-align: center;
+    color: $white;
+    width: 270px;
+    border-bottom: 1px solid $white;
+    @media all and (min-width: 480px) {
+      font-size: 4.8rem;
+    }
+    @media all and (min-width: 600px) {
+      font-size: 5.2rem;
+    }
+    @media all and (min-width: 768px) {
+      font-size: 6.5rem;
+      width: 350px;
+    }
+    @media all and (min-width: 1024px) {
+      font-size: 8rem;
+      width: 550px;
+    }
+  }
+  &__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $white;
+    letter-spacing: 1px;
+    @media all and (min-width: 480px) {
+      font-size: 1.8rem;
+    }
+    @media all and (min-width: 600px) {
+      font-size: 2rem;
+    }
+    @media all and (min-width: 768px) {
+      font-size: 2.3rem;
+    }
+    @media all and (min-width: 1024px) {
+      font-size: 2.6rem;
+    }
+    &:last-of-type {
+      padding-bottom: 20px;
+    }
+  }
+}

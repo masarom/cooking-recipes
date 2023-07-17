@@ -1,3 +1,36 @@
-.recipe__image {
-    width: 200px;
+@import '../core/Var';
+
+.recipe {
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &__article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: $accent-clr;
+    padding-bottom: 15px;
+    &--image {
+      width: 100%;
+      height: 170px;
+      background-position: center;
+      background-size: cover;
+      @media all and (min-width: 768px) {
+        height: 200px;
+      }
+    }
+    &--title {
+      color: $main-clr;
+      font-size: $large-txt;
+      font-family: $scd-title;
+      text-align: center;
+      border-bottom: 1px solid $main-clr;
+      margin-bottom: 7px;
+    }
+    &--excerpt {
+      font-size: $medium-txt;
+    }
+  }
 }

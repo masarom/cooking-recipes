@@ -1,0 +1,72 @@
+@import '../core/Var';
+
+.footer {
+  background-color: $accent-clr;
+  color: $white;
+  padding: 20px 20px;
+  font-size: $small-txt;
+  &__container {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    @media all and (min-width: 480px) {
+      flex-flow: row wrap;
+    }
+  }
+  &__desc {
+    padding: 0 15px;
+    @media all and (min-width: 480px) {
+      width: 25%;
+    }
+    &--text {
+      font-style: italic;
+    }
+  }
+  &__nav {
+    width: 100%;
+    padding: 0 15px;
+    @media all and (min-width: 480px) {
+      width: 40%;
+      border-left: 1px solid $white;
+      border-right: 1px solid $white;
+    }
+    & .nav__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      gap: 15px;
+      @media all and (min-width: 480px) {
+        justify-content: space-around;
+        gap: 0;
+      }
+      &--item {
+        cursor: pointer;
+        padding-bottom: 5px;
+      }
+      &--link {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+          color: $main-clr;
+        }
+      }
+    }
+  }
+  &__copy {
+    align-self: flex-end;
+    &--link {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: $main-clr;
+      }
+    }
+    @media all and (min-width: 480px) {
+      width: 25%;
+    }
+  }
+}

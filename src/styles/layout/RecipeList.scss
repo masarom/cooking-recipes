@@ -1,0 +1,24 @@
+@import '../core/Var';
+
+.recipe__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  max-width: 1024px;
+  margin: auto;
+  @media all and (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  @media all and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  &--item {
+    padding: 20px 20px 0px;
+    margin: 15px;
+    border-bottom: 1px solid $accent-clr;
+    border: 2px solid $accent-clr;
+    border-radius: 3px;
+  }
+}
