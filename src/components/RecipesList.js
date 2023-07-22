@@ -1,17 +1,18 @@
-import RecipesArticle from "./RecipeArticle";
+import RecipesArticle from './RecipeArticle';
 import '../styles/layout/RecipeList.scss';
 
-const RecipesList = ({recipes}) => {
-    const recipesLi = recipes.map((eachRecipe) => (
-      <li key={eachRecipe.id} className="recipe__list--item">
-        <RecipesArticle eachRecipe={eachRecipe} />
-      </li>
-));
+const RecipesList = ({ recipes }) => {
+  //map recipes
+  const recipesLi = recipes.map((eachRecipe, i) => (
+    <li key={eachRecipe.id} className={`recipe__list--item ${'item'+i}`}>
+      <RecipesArticle eachRecipe={eachRecipe} i={i}/>
+    </li>
+  ));
   return (
-    <ul className="recipe__list">
+    <ul className='recipe__list'>
       {recipesLi}
     </ul>
   );
-}
+};
 
 export default RecipesList;

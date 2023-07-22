@@ -64,6 +64,10 @@
       &:hover {
         color: $main-clr;
       }
+    &.img {
+      display: block;
+      font-size: 0.7rem;
+    }
     }
     @media all and (min-width: 480px) {
       width: 25%;

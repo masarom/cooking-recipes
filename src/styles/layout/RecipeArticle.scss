@@ -11,15 +11,35 @@
     justify-content: center;
     align-items: center;
     color: $accent-clr;
-    padding-bottom: 15px;
     &--image {
       width: 100%;
+      min-height: 150px;
       height: 370px;
       background-position: center;
       background-size: cover;
-      /* @media all and (min-width: 768px) {
-        height: 200px;
-      } */
+      &.item1{
+        @media all and (min-width: 900px) {
+          height: 150px;
+        }
+        @media all and (min-width: 1024px) {
+          height: 370px;
+        }
+      }
+      &.item2{
+        @media all and (min-width: 900px) {
+          height: 150px;
+        }
+      }
+      &.item3 {
+        @media all and (min-width: 900px) {
+          height: 150px;
+        }
+      }
+      &.item4 {
+        @media all and (min-width: 1024px) {
+          height: 150px;
+        }
+      }
     }
     &--title {
       color: $main-clr;
@@ -34,4 +54,3 @@
     }
   }
 }
-

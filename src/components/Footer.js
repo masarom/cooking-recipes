@@ -50,22 +50,25 @@ const Footer = () => {
           </ul>
         </section>
         <section className='footer__copy'>
-          <NavLink to={'/'}
-            title='Política de privacidad'
-            className='footer__copy--link'
-          >
+          <NavLink to={'/'} title='Política de privacidad' className='footer__copy--link'>
             Política de privacidad
           </NavLink>
           <p>Otro Poquito &copy; 2023</p>
           <small>
-            Creado por
-            <NavLink to={'https://github.com/masarom'}
+            Creado por 
+            <NavLink
+              to={'https://github.com/masarom'}
               target='_blank'
               title='Perfil de GitHub de María Sánchez'
               className='footer__copy--link'
             >
-              @masarom
+               @masarom
             </NavLink>
+          </small>
+          <small>
+            <a href='https://pngtree.com/freebackground/fresh-fruit-and-vegetable-breakfast-food_949037.html' className='footer__copy--link img'>
+              free background photos from pngtree.com/
+            </a>
           </small>
         </section>
       </div>
