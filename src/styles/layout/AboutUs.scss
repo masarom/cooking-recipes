@@ -1,0 +1,18 @@
+@import '../core/Var';
+
+.aboutUs {
+    padding: 60px 15px 0 15px;
+    &__article{
+        &--title{
+            font-family: $scd-title;
+            font-size: $large-txt;
+            text-align: center;
+        }
+        &--text{
+            font-size: $medium-txt;
+        }
+        &--link{
+            text-decoration: none;
+        }
+    }
+}
