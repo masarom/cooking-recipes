@@ -124,52 +124,56 @@ const App = () => {
   const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === recipeId);
 
   return (
-    <>
-      <Header />
-      <main className='main'>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <>
-                <Hero />
-                <RecipesList recipes={recipes} />
-              </>
-            }
-          ></Route>
-          <Route path='/quienes-somos' element={<AboutUs />}></Route>
-          <Route path='/planificador-semanal' element={<WeeklyPlanner />}></Route>
-          <Route
-            path='/nueva-receta'
-            element={
-              <NewRecipe
-                /* one input only */
-                addIngredientValue={addIngredientValue}
-                ingrValueInput={ingrValueInput}
-                addIngredients={addIngredients}
-                ingredients={ingredients}
-                addStepValue={addStepValue}
-                stepValueInput={stepValueInput}
-                addSteps={addSteps}
-                steps={steps}
-                addNewRecipe={addNewRecipe}
-                recipes={recipes}
-                addNewTitle={addNewTitle}
-                newTitle={newTitle}
-                addInitialComment={addInitialComment}
-                initialComment={initialComment}
-                addNewImage={addNewImage}
-                newImage={newImage}
-                updateIngredients={updateIngredients}
-                updateSteps={updateSteps}
-              />
-            }
-          ></Route>
-          <Route path='receta/:recipeId' element={<RecipeDetail findRecipe={findRecipe} />}></Route>
-        </Routes>
-      </main>
-      <Footer />
-    </>
+    <div className='body__container'> 
+      <section className='body__container--content'>
+      
+        <Header />
+        <main className='main'>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  <Hero />
+                  <RecipesList recipes={recipes} />
+                </>
+              }
+            ></Route>
+            <Route path='/quienes-somos' element={<AboutUs />}></Route>
+            <Route path='/planificador-semanal' element={<WeeklyPlanner />}></Route>
+            <Route
+              path='/nueva-receta'
+              element={
+                <NewRecipe
+                  /* one input only */
+                  addIngredientValue={addIngredientValue}
+                  ingrValueInput={ingrValueInput}
+                  addIngredients={addIngredients}
+                  ingredients={ingredients}
+                  addStepValue={addStepValue}
+                  stepValueInput={stepValueInput}
+                  addSteps={addSteps}
+                  steps={steps}
+                  addNewRecipe={addNewRecipe}
+                  recipes={recipes}
+                  addNewTitle={addNewTitle}
+                  newTitle={newTitle}
+                  addInitialComment={addInitialComment}
+                  initialComment={initialComment}
+                  addNewImage={addNewImage}
+                  newImage={newImage}
+                  updateIngredients={updateIngredients}
+                  updateSteps={updateSteps}
+                />
+              }
+            ></Route>
+            <Route path='receta/:recipeId' element={<RecipeDetail findRecipe={findRecipe} />}></Route>
+          </Routes>
+        </main>
+        <Footer />
+      </section> 
+    </div>
+  
   );
 };
 

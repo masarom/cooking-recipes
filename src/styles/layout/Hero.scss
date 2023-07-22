@@ -1,28 +1,30 @@
 @import '../core/Var';
 
 .hero {
-  background-color: rgba(0, 0, 0, 0.45);
-  background-image: url('../../images/hero.jpeg');
+  background-image: linear-gradient(to top, rgba(255,255,255, 0.6), rgba(220,195,180, 0.5)), url('../../images/hero-6.jpg');
   background-position: center;
   background-size: cover;
-  background-blend-mode: multiply;
-  min-height: 35vh;
   display: flex;
+  min-height: 45vh;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding-top: 20px;
   gap: 10px;
+  padding: 0 0 10px;
+  @media all and (min-width:600px){
+    align-items: center;
+    justify-content: center;
+  }
   @media all and (min-width:1024px){
-    min-height: 42vh;
+    min-height: 52vh;
   }
   &__title {
     font-size: 4rem;
     font-family: 'Rancho', sans-serif;
     text-align: center;
-    color: $white;
+    color: $accent-clr;
     width: 270px;
-    border-bottom: 1px solid $white;
+    border-bottom: 1px solid $accent-clr;
     @media all and (min-width: 480px) {
       font-size: 4.8rem;
     }
@@ -42,13 +44,14 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     text-align: center;
-    color: $white;
+    color: $accent-clr;
     letter-spacing: 1px;
     @media all and (min-width: 480px) {
       font-size: 1.8rem;
     }
     @media all and (min-width: 600px) {
       font-size: 2rem;
+      padding-left: 15px;
     }
     @media all and (min-width: 768px) {
       font-size: 2.3rem;

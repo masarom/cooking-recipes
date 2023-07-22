@@ -1,6 +1,11 @@
 @import '../core/Var';
 
 .main {
-    background-color: $background-clr-75;
+    background-color: $white;
+    @media all and (min-width: 600px) {
+        /* padding-top: 90px; */
+        transform: translateY(-50px);
+        background-color: $white;
+    }
     min-height: 100vh;
 }

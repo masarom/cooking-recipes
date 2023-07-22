@@ -1,0 +1,29 @@
+@import '../core/Var';
+
+.body__container {
+    margin: auto;
+    @media all and (min-width: 600px) {
+      background-image: url('../../images/background-3.svg');
+      background-position: center;
+      background-size: 150px;
+      background-attachment: fixed;
+      padding: 70px 0;
+    }
+    &--content {
+    margin: auto;
+    min-height: 100vh;
+    @media all and (min-width: 600px) {
+      max-width: 500px;
+      box-shadow: 0px 0px 15px $accent-clr;
+      background-color: $white;
+      border-radius: 20px;
+    }
+    @media all and (min-width: 768px) {
+      max-width: 650px;
+    }
+    @media all and (min-width: 1024px) {
+      max-width: 950px;
+    }
+
+  }
+}

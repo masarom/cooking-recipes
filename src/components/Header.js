@@ -21,10 +21,10 @@ const drawerWidth = 240;
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#c62f38',
+      light: '#ffffff',
       main: '#c62f38',
       dark: '#3d405b',
-      contrastText: '#fff',
+      contrastText: '#c62f38',
     },
   },
 });
@@ -53,17 +53,17 @@ function Header(props) {
           fontSize: 34,
           margin: 0,
           padding: '16px 0',
-          backgroundColor: 'primary.light',
+          backgroundColor: 'primary.main',
         }}
       >
-        <Link className='menu__item' to='/'>
+        <Link className='menu__item--title' to='/' title={navItems[0]}>
           Otro Poquito
         </Link>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item, i) => (
-          <NavLink key={item} to={navLinks[i]} className='menu__item'>
+          <NavLink key={item} to={navLinks[i]} className='menu__item' title={item}>
             <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText
@@ -82,17 +82,21 @@ function Header(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex', paddingBottom: 1 }}>
+      <Box sx={{ display: 'flex', paddingBottom: 0 }}>
         <CssBaseline />
         {/* Tablet & desktop version */}
-        <AppBar component='nav'>
-          <Toolbar>
+        <AppBar component='nav' sx={{ position: "static"}}>
+          <Toolbar sx={{ bgcolor: 'primary.light' }}>
             <IconButton
-              color='inherit'
               aria-label='open drawer'
               edge='start'
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' }, '& .MuiSvgIcon-fontSizeMedium': { width: 30, height: 30 } }}
+              sx={{
+                mr: 2,
+                display: { sm: 'none' },
+                '& .MuiSvgIcon-fontSizeMedium': { width: 30, height: 30 },
+                color: 'primary.main',
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -109,14 +113,14 @@ function Header(props) {
                 },
               }}
             >
-              <Link className='menu__item' to='/'>
+              <Link className='menu__item' to='/' title={navItems[0]}>
                 Otro Poquito
               </Link>
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block', paddingLeft: 54 } }}>
               {navItems.map((item, i) => (
-                <NavLink key={item} to={navLinks[i]}>
-                  <Button sx={{ color: '#fff', fontSize: 12, fontFamily: 'Montserrat, Roboto' }}>{item}</Button>
+                <NavLink key={item} to={navLinks[i]} title={item}>
+                  <Button sx={{ color: 'primary.main', fontSize: 12, fontFamily: 'Montserrat, Roboto' }}>{item}</Button>
                 </NavLink>
               ))}
             </Box>
@@ -140,7 +144,7 @@ function Header(props) {
             {drawer}
           </Drawer>
         </Box>
-        <Box component='main' sx={{ p: 3 }}></Box>
+        <Box component='main' sx={{ p: 0 }}></Box>
       </Box>
     </ThemeProvider>
   );

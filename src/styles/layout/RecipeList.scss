@@ -6,7 +6,7 @@
   grid-template-rows: repeat(6, 1fr);
   max-width: 1024px;
   margin: auto;
-  @media all and (min-width: 480px) {
+  @media all and (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
@@ -15,10 +15,16 @@
     grid-template-rows: repeat(2, 1fr);
   }
   &--item {
-    padding: 20px 20px 0px;
+    padding: 20px 0 0;
+    // border-bottom: 1px solid $accent-clr;
     margin: 15px;
-    border-bottom: 1px solid $accent-clr;
-    border: 2px solid $accent-clr;
-    border-radius: 3px;
+    @media all and (min-width: 600px) {
+      border-bottom: none;
+      &:nth-child(odd) {
+        margin-right: 0;
+        padding-right: 15px;
+        /* border-right: 1px solid $accent-clr; */
+      }
+    }
   }
 }
