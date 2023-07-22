@@ -205,5 +205,424 @@
       ],
       "finalQuote": "¡Que aproveche!"
     }
+  },
+  {
+    "id": "1fgs-4dre-ads7-wert-98rt",
+    "title": "Croquetas de pollo y ternera",
+    "image": "https://2.bp.blogspot.com/-p8nPBXuooD8/UxTlzZmMJMI/AAAAAAAAAaY/ktasnV_l6Vg/s1600/Paso9.JPG",
+    "initialComment": "Para hacer esta receta, puedes utilizar el pollo y el morcillo que sobra del puchero o caldo de pollo.",
+    "ingredients": {
+      "rawList": [
+        "Carne de pollo y morcillo que nos sobre de hacer caldo y que hemos picado muy finito con las tijeras",
+        "3 o 4 cucharadas de harina",
+        "4 cucharadas de aceite",
+        "Media cebolla muy picadita",
+        "1 litro de leche (yo la pongo semidesnatada)",
+        "1 pastilla de caldo de pollo tipo avecrem",
+        "Huevo",
+        "Pan rallado",
+        "Aceite para freírlas",
+        "Sal"
+      ],
+      "parsed": [
+        {
+          "ingredientId": 1,
+          "quantity": "",
+          "unit": "",
+          "product": "Carne de pollo y morcillo",
+          "productSize": "",
+          "preparationNotes": "que nos sobre de hacer caldo y que hemos picado muy finito con las tijeras"
+        },
+        {
+          "ingredientId": 2,
+          "quantity": "3 o 4",
+          "unit": "cucharadas",
+          "product": "harina",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 3,
+          "quantity": "4",
+          "unit": "cucharadas",
+          "product": "aceite",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 4,
+          "quantity": "Media",
+          "unit": "",
+          "product": "cebolla",
+          "productSize": "",
+          "preparationNotes": "muy picadita"
+        },
+        {
+          "ingredientId": 5,
+          "quantity": "1",
+          "unit": "",
+          "product": "cebolla",
+          "productSize": "pequeña",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 6,
+          "quantity": "1",
+          "unit": "L",
+          "productSize": "",
+          "product": "leche",
+          "preparationNotes": "(yo la pongo semidesnatada)"
+        },
+        {
+          "ingredientId": 7,
+          "quantity": "1",
+          "unit": "",
+          "productSize": "",
+          "product": "pastilla de caldo",
+          "preparationNotes": "tipo avecrem"
+        },
+        {
+          "ingredientId": 8,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Huevo",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 9,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Pan rallado",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 10,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Aceite",
+          "preparationNotes": "para freírlas"
+        },
+        {
+          "ingredientId": 11,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Sal",
+          "preparationNotes": ""
+        }
+      ]
+    },
+    "elaboration": {
+      "steps": [
+        "En una sartén antiadherente ponemos a calentar el aceite y echamos a continuación la cebolla. Cuando esté transparente añadimos la harina.",
+        "Lo rehogamos y añadimos poco a poco la leche (sin dejar de remover).",
+        "Cuando hayamos puesto la mitad de la leche le ponemos la carne y removemos. ",
+        "Añadimos la pastilla de Avecrem, seguimos añadiendo la leche y removiendo hasta que la masa se despegue de la sartén.",
+        "Cuando la masa esté lista la extendemos en una bandeja de cristal y la dejamos enfriar (para que no se forme una capa dura al enfriarse yo le pongo inmediatamente film transparente bien pegadito a la masa).",
+        "Luego las liamos y las pasamos por huevo y pan rallado.",
+        "Se fríen en abundante aceite caliente y se dejan escurrir en papel de cocina para que suelten el aceite sobrante.",
+        "Las pasamos a una bandeja y ¡listo!",
+        "NOTA: como salen bastantes croquetas, podemos reservar en una bandeja de poliespan unas cuantas (ya con el pan rallado) y congelarlas, envueltas en film transparente."
+      ],
+      "finalQuote": "¡Que aproveche!"
+    }
+  },
+  {
+    "id": "0ftk-wef3-23fs-234f-dfgr",
+    "title": "Arroz de Rosa",
+    "image": "https://2.bp.blogspot.com/-StnjgvBv5aM/VD2Q0VLub_I/AAAAAAAAB1A/gebrlI2eV-Q/s1600/P1030525.JPG",
+    "initialComment": "Esta es una receta que me pasó mi prima Rosa de Chiclana. Es muy ligero y por eso lo acompañamos con un paté y una ensalada. Nos gustó mucho.",
+    "ingredients": {
+      "rawList": [
+        "300 gr. de arroz redondo normal (para 4 personas)",
+        "2 puerros",
+        "1 calabacín y medio",
+        "2 tarros de yemas de espárragos verdes de 125gr escurridos",
+        "2 sobres de azafrán en polvo Carmencita",
+        "Agua para cocer el arroz",
+        "Aceite de oliva",
+        "Sal"
+      ],
+      "parsed": [
+        {
+          "ingredientId": 1,
+          "quantity": "300",
+          "unit": "gr",
+          "product": "arroz redondo normal",
+          "productSize": "",
+          "preparationNotes": "(para 4 personas)"
+        },
+        {
+          "ingredientId": 2,
+          "quantity": "2",
+          "unit": "",
+          "product": "puerros",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 3,
+          "quantity": "1.5",
+          "unit": "",
+          "product": "calabacín",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 4,
+          "quantity": "2",
+          "unit": "tarros",
+          "product": "yemas de espárragos verdes de 125gr",
+          "productSize": "",
+          "preparationNotes": "escurridos"
+        },
+        {
+          "ingredientId": 5,
+          "quantity": "2",
+          "unit": "sobres",
+          "product": "azafrán en polvo Carmencita",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 6,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Agua",
+          "preparationNotes": "para cocer el arroz"
+        },
+        {
+          "ingredientId": 7,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Aceite de oliva",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 8,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Sal",
+          "preparationNotes": ""
+        }
+      ]
+    },
+    "elaboration": {
+      "steps": [
+        "Ponemos a cocer en una olla agua (2 veces y media la cantidad de arroz) con una cucharadita y media de sal. Si queremos le podemos añadir al agua 2 hojitas de laurel. Cuando empiece a hervir le añadimos el arroz y lo cocemos hasta que esté hecho pero un poco al dente (unos 15-18 minutos).",
+        "Mientras tanto, en una sartén grande ponemos unas 6-8 cucharadas de aceite a fuego fuerte. Lavamos los puerros y los picamos finos y los echamos a pochar a fuego medio en la sartén. Cuando estén pochados añadimos los calabacines (que previamente hemos lavado) con su piel y cortados en láminas finitas. Echamos unas pizcas de sal. Pochamos hasta que los calabacines estén blanditos (mejor si tapamos la sartén un ratito).",
+        "Añadimos los espárragos verdes y los sobrecitos de azafrán. Removemos bien. Rectificamos el punto de sal.",
+        "Escurrimos el arroz y lo volcamos sobre la sartén. Removemos bien para que todo tome color amarillo verdoso. Y listo…",
+        "Nota: si se quiere se puede espolvorear un poco de queso rallado por encima y queda muy bien."
+      ],
+      "finalQuote": "¡Que aproveche!"
+    }
+  },
+  {
+    "id": "sdf4-lkj6-4hyu-87kk-rthf",
+    "title": "Berenjenas en tempura con miel",
+    "image": "https://3.bp.blogspot.com/-eegWpvCeY4A/Vh4Fs2YbS5I/AAAAAAAADSE/2gzHYH5UMvA/s1600/P1040510.JPG",
+    "initialComment": "Esta es una receta que me pasó mi prima Rosa de Chiclana. Es muy ligero y por eso lo acompañamos con un paté y una ensalada. Nos gustó mucho.",
+    "ingredients": {
+      "rawList": [
+        "1 berenjena mediana o 2 pequeñas",
+        "150 gr de agua muy muy fría",
+        "150 gr harina de trigo o especial tempura",
+        "6 cucharadas de miel",
+        "2 cucharadas de agua",
+        "Aceite de oliva virgen extra",
+        "Sal"
+      ],
+      "parsed": [
+        {
+          "ingredientId": 1,
+          "quantity": "1",
+          "unit": "",
+          "product": "berenjena",
+          "productSize": "mediana",
+          "preparationNotes": "o 2 pequeñas"
+        },
+        {
+          "ingredientId": 2,
+          "quantity": "150",
+          "unit": "gr",
+          "product": "agua",
+          "productSize": "",
+          "preparationNotes": "muy fría"
+        },
+        {
+          "ingredientId": 3,
+          "quantity": "150",
+          "unit": "gr",
+          "product": "harina de trigo o especial tempura",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 4,
+          "quantity": "6",
+          "unit": "cucharadas",
+          "product": "miel",
+          "productSize": "",
+          "preparationNotes": "escurridos"
+        },
+        {
+          "ingredientId": 5,
+          "quantity": "2",
+          "unit": "cucharadas",
+          "product": "agua",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 6,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "aceite de oliva virgen extra",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 7,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Sal",
+          "preparationNotes": ""
+        }
+      ]
+    },
+    "elaboration": {
+      "steps": [
+        "Lavamos bien las berenjenas y las cortamos en rodajas de medio centímetro como mucho. Las dejamos en un escurridor con un poco de sal para que suden y pierdan el amargor durante 30 minutos por lo menos.",
+        "Ponemos a calentar abundante aceite en una sartén honda.",
+        "Mientras se calienta, preparamos el rebozado. Ponemos un bol la harina y el agua y mezclamos bien hasta conseguir una masa liquida pero consistente. Sumergimos las rodajas de berenjena en el bol y vamos friendo por tandas hasta que estén doradas. Las vamos escurriendo en un plato con papel absorbente para retirar el exceso de grasa.",
+        "Las disponemos en una bandeja.",
+        "En un bol ponemos la miel y el agua. Calentamos 30 segundos en el microondas. Removemos bien y servimos junto a las berenjenas."
+      ],
+      "finalQuote": "¡Que aproveche!"
+    }
+  },
+  {
+    "id": "dhjn-990y-jkgh-23fg-erty",
+    "title": "Rodaballo al horno con patatas",
+    "image": "https://1.bp.blogspot.com/-tYsLsb8xuNE/Vgrt5uDfp6I/AAAAAAAADLU/14cyoZAzO2g/s1600/P1040329.JPG",
+    "initialComment": "El rodaballo es uno de los pescados más finos y exquisitos que hay, sobre todo si son salvajes. En esta receta yo he usado dos rodaballos medianos de 1,200 más o menos cada uno de ellos.",
+    "ingredients": {
+      "rawList": [
+        "2 Rodaballos medianos (4-5 personas)",
+        "4 patatas",
+        "2 cebollas",
+        "2 tomates maduros",
+        "5 ajos gordos",
+        "1 vaso de vino blanco",
+        "Vinagre de Jerez",
+        "Aceite de oliva virgen extra",
+        "Pimienta",
+        "Sal"
+      ],
+      "parsed": [
+        {
+          "ingredientId": 1,
+          "quantity": "2",
+          "unit": "",
+          "product": "rodaballos",
+          "productSize": "medianos",
+          "preparationNotes": "(4-5 personas)"
+        },
+        {
+          "ingredientId": 2,
+          "quantity": "4",
+          "unit": "",
+          "product": "patatas",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 3,
+          "quantity": "2",
+          "unit": "",
+          "product": "cebollas",
+          "productSize": "",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 4,
+          "quantity": "2",
+          "unit": "",
+          "product": "tomates",
+          "productSize": "",
+          "preparationNotes": "maduros"
+        },
+        {
+          "ingredientId": 5,
+          "quantity": "5",
+          "unit": "",
+          "product": "ajos",
+          "productSize": "gordos",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 6,
+          "quantity": "1",
+          "unit": "vaso",
+          "productSize": "",
+          "product": "vino blanco",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 8,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "vinagre de Jerez",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 9,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "aceite de oliva virgen extra",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 10,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Pimienta",
+          "preparationNotes": ""
+        },
+        {
+          "ingredientId": 11,
+          "quantity": "",
+          "unit": "",
+          "productSize": "",
+          "product": "Sal",
+          "preparationNotes": ""
+        }
+      ]
+    },
+    "elaboration": {
+      "steps": [
+        "Precalentamos el horno a 180º arriba y abajo.",
+        "Lavamos, pelamos y cortamos las patatas de ½ cm de grosor más o menos.",
+        "En una fuente de horno o en la bandeja del horno, echamos aceite de oliva en la base de manera que se cubra el fondo, extendiéndolo con ayuda de un pincel. Disponemos las patatas encima solapándolas un poco, y las salpimentamos.",
+        "A continuación añadimos las cebollas cortadas en juliana y los tomate troceados en gajos por toda la fuente y salpimentamos de nuevo un pelín más. Esparcimos el vaso de vino blanco por encima y un chorrito de aceite de oliva e introducimos la bandeja en el horno a 180º, altura media y durante unos 40 minutos.",
+        "Mientras tanto lavamos bien los rodaballos y reservamos hasta que las patatas, la cebolla y el tomate estén listos. En este momento colocamos el pescado en la bandeja sobre la cama que le hemos preparado y con la piel oscura hacia arriba untado de aceite y con sal.",
+        "Horneamos unos 30 minutos a 180º y a media altura.",
+        "Mientras tanto, picamos los ajos pequeñitos, los freímos en aceite y cuando estén dorados retiramos del fuego la sartén y añadimos un chorro de vinagre de Jerez. Tapamos para evitar que  nos salte.",
+        "Cuando el pescado esté listo le echaremos el preparado de la sartén por encima y lo mantendremos en el horno por unos minutos. Servir inmediatamente.",
+        "NOTA: Esta receta la podemos hacer con cualquier otro pescado, lomos de bacalao, de merluza….y también queda genial."
+      ],
+      "finalQuote": "¡Que aproveche!"
+    }
   }
 ]
