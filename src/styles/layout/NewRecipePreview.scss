@@ -1,0 +1,111 @@
+@import '../core/Var';
+
+.recipe__preview {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: $white;
+  color: $accent-clr;
+  font-size: $medium-txt;
+  padding: 40px 0;
+  margin: 0 15px;
+  @media all and (min-width: 600px) {
+    padding: 70px 0 40px;
+    margin: 0 25px;
+    background-color: $scd-accent-clr;
+  }
+  @media all and (min-width: 900px) {
+    width: 50%;
+  }
+  &--title {
+    font-family: $primary-title;
+    font-size: $largest-txt;
+    width: 85%;
+    text-align: center;
+    border-bottom: 1px solid $main-clr;
+    margin-bottom: 15px;
+    line-height: 0.8;
+    @media all and (min-width: 600px) {
+      width: 80%;
+    }
+    @media all and (min-width: 1024px) {
+      width: 70%;
+    }
+  }
+  &--image {
+    width: 85%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    @media all and (min-width: 600px) {
+      width: 80%;
+      height: 200px;
+    }
+    @media all and (min-width: 900px) {
+      height: 250px;
+    }
+    @media all and (min-width: 1024px) {
+      width: 70%;
+      height: 350px;
+    }
+  }
+  &--initialComment {
+    padding: 15px 15px 0;
+    font-style: italic;
+    @media all and (min-width: 768px) {
+      width: 85%;
+    }
+  }
+  &--ingredients,
+  &--elaboration {
+    padding-right: 15px;
+    width: 100%;
+    @media all and (min-width: 768px) {
+      width: 100%;
+    }
+    &-title {
+      font-family: $scd-title;
+      font-size: $large-txt;
+      padding-top: 20px;
+      margin-left: 15px;
+    }
+    &-list {
+      padding-left: 35px;
+      & .item {
+        padding-bottom: 5px;
+      }
+    }
+    &-btn {
+      cursor: pointer;
+      margin: 2px 5px;
+      padding: 1px 5px;
+      font-family: $scd-title;
+      color: $white;
+      text-decoration: none;
+      background-color: $main-clr;
+      border: 3px solid $main-clr;
+      border-radius: 5px;
+      &:hover {
+        background-color: $white;
+        color: $main-clr;
+        border: 3px solid $main-clr;
+      }
+    }
+    &--finalQuote {
+      display: block;
+      padding-top: 15px;
+    }
+  }
+  &--elaboration-list {
+    list-style-type: none;
+    padding: 0 15px;
+    & .item {
+      padding-bottom: 10px;
+      text-align: justify;
+    }
+  }
+}
+
+.btn-back {
+  padding-top: 35px;
+}

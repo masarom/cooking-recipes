@@ -7,7 +7,9 @@ const NewRecipeIngredients = ({ eachIngr, ingredients, updateIngredients }) => {
   };
   return (
     <>
-      <button onClick={handleClickDelete}>x</button>
+      <button className='recipe__preview--ingredients-btn' onClick={handleClickDelete}>
+        x
+      </button>
       {eachIngr}
     </>
   );

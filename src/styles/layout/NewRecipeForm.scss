@@ -1,0 +1,72 @@
+@import '../core/Var';
+
+.form {
+  color: $accent-clr;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 15px;
+  @media all and (min-width: 900px) {
+    width: 50%;
+  }
+  &__info,
+  &__image,
+  &__ingredients,
+  &__elaboration {
+    width: 100%;
+    &--title,
+    &--initialComment {
+      display: block;
+      font-family: $scd-title;
+      font-size: $large-txt;
+      text-align: center;
+    }
+    &--input,
+    &--textarea {
+      width: 100%;
+      padding: 5px 5px;
+      margin-bottom: 10px;
+      font-family: $main-text;
+      border: 2px solid $accent-clr;
+      border-radius: 5px;
+    }
+  }
+  &__ingredients,
+  &__elaboration {
+    &--text {
+      font-family: $main-text;
+      font-size: $medium-txt;
+      text-align: center;
+    }
+    &--btn {
+      cursor: pointer;
+      display: block;
+      margin: 0 auto 15px;
+      padding: 5px 30px;
+      font-family: $scd-title;
+      color: $white;
+      text-decoration: none;
+      background-color: $accent-clr;
+      border: none;
+      border-radius: 5px;
+      &:hover {
+        background-color: $main-clr;
+      }
+    }
+  }
+  &__submit {
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 15px;
+    padding: 7px 30px;
+    font-family: $scd-title;
+    color: $white;
+    text-decoration: none;
+    background-color: $main-clr;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+      padding: 10px 45px;
+    }
+  }
+}

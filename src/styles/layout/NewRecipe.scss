@@ -1,7 +1,28 @@
-.form__ingredient--item {
-display: flex;
-flex-flow: column wrap;
-gap: 5px;
-margin: 15px auto;
-width: 200px;
+@import '../core/Var';
+
+.new__recipe {
+  padding: 30px 0;
+  color: $accent-clr;
+  @media all and (min-width: 600px) {
+      padding-top: 70px;
+    }
+  &--title {
+    display: block;
+    font-family: $primary-title;
+    font-size: $largest-txt;
+    width: 85%;
+    text-align: center;
+    border-bottom: 1px solid $main-clr;
+    line-height: 0.8;
+    margin: 0 auto 15px;
+    
+  }
+  &--content {
+    display: flex;
+    flex-flow: column;
+    
+    @media all and (min-width: 900px) {
+      flex-direction: row-reverse;
+    }
+  }
 }

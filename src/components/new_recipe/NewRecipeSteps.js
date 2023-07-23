@@ -1,3 +1,5 @@
+import '../../styles/layout/NewRecipePreview.scss';
+
 const NewRecipeSteps = ({ eachStep, steps, updateSteps }) => {
   const handleClickDelete = (ev) => {
     ev.preventDefault();
@@ -7,10 +9,12 @@ const NewRecipeSteps = ({ eachStep, steps, updateSteps }) => {
     updateSteps(findStepIndex);
   };
   return (
-    <>
-      <button onClick={handleClickDelete}>x</button>
+    <div className='item'>
+      <button className='recipe__preview--elaboration-btn' onClick={handleClickDelete}>
+        x
+      </button>
       {eachStep}
-    </>
+    </div>
   );
 };
 
