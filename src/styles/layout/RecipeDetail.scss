@@ -1,0 +1,79 @@
+@import '../core/Var';
+
+.recipe {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: $accent-clr;
+  font-size: $medium-txt;
+  padding: 40px 0;
+  margin: 0 15px;
+  @media all and (min-width: 600px) {
+    padding: 70px 0;
+    margin: 0 25px;
+  }
+  &__title {
+    font-family: $primary-title;
+    font-size: $largest-txt;
+    width: 85%;
+    text-align: center;
+    border-bottom: 1px solid $main-clr;
+    margin-bottom: 15px;
+    line-height: 0.8;
+    @media all and (min-width: 600px) {
+      width: 80%;
+    }
+    @media all and (min-width: 1024px) {
+      width: 70%;
+    }
+  }
+  &__image {
+    width: 85%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    @media all and (min-width: 600px) {
+      width: 80%;
+      height: 200px;
+    }
+    @media all and (min-width: 900px) {
+      height: 250px;
+    }
+    @media all and (min-width: 1024px) {
+      width: 70%;
+      height: 350px;
+    }
+  }
+  &__initialComment {
+    padding-top: 15px;
+    font-style: italic;
+    @media all and (min-width: 768px) {
+      width: 85%;
+    }
+  }
+  &__ingredients,
+  &__elaboration {
+    width: 100%;
+    @media all and (min-width: 768px) {
+      width: 85%;
+    }
+    &--title {
+      font-family: $scd-title;
+      font-size: $large-txt;
+      padding-top: 20px;
+    }
+    &--list {
+      list-style-type: circle;
+      padding-left: 35px;
+    }
+  }
+  &__elaboration--list {
+    list-style-type: none;
+    padding: 0 15px;
+    & .item {
+      padding-bottom: 12px;
+      text-align: justify;
+    }
+  }
+}
