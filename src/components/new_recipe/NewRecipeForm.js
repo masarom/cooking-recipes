@@ -6,38 +6,27 @@ const NewRecipeForm = ({
   newTitle,
   addInitialComment,
   initialComment,
-  addIngredientValue,
-  addIngredients,
+  handleInputValue,
+  addValue,
   ingrValueInput,
-  ingredients,
-  addStepValue,
   stepValueInput,
-  addSteps,
-  steps,
-  recipes,
   addNewRecipe,
   addNewImage,
   newImage,
-  updateIngredients,
-  updateSteps,
 }) => {
-  // gathers input value and stores it in ingrValueInput (4)
-  const handleChangeIngredient = (ev) => {
-    return addIngredientValue(ev.target.value);
+  const handleChangeInput = (ev) => {
+    return handleInputValue(ev.target.name, ev.target.value);
   };
+
   // Adds ingredient to ingredients (5) array
-  const handleClickAddIngredient = (ev) => {
+  const handleClickAdd = (ev) => {
     ev.preventDefault();
-    return addIngredients(ingrValueInput);
-  };
-
-  const handleChangeStep = (ev) => {
-    return addStepValue(ev.target.value);
-  };
-
-  const handleClickAddStep = (ev) => {
-    ev.preventDefault();
-    return addSteps(stepValueInput);
+    if (ev.target.name === 'ingredient') {
+      return addValue(ev.target.name, ingrValueInput);
+      
+    } else if (ev.target.name === 'step') {
+      return addValue(ev.target.name, stepValueInput);
+    }
   };
 
   const hangleChangeTitle = (ev) => {
@@ -87,15 +76,6 @@ const NewRecipeForm = ({
           Imagen de presentación
         </label>
         <GetAvatar text='Subir imagen' avatar={newImage} updateAvatar={handleChangeImage} />
-        {/* <input
-          type='url'
-          className='form__image--input'
-          name='image'
-          id='image'
-          placeholder='Ej: https://google.es'
-          value={newImage}
-          onInput={handleChangeImage}
-        /> */}
       </fieldset>
       <fieldset className='form__ingredients'>
         <h2 className='form__ingredients--title'>Ingredientes</h2>
@@ -107,10 +87,10 @@ const NewRecipeForm = ({
           className='form__ingredients--input'
           name='ingredient'
           placeholder='ej: 1 kg de patatas'
-          onChange={handleChangeIngredient}
-          value={ingrValueInput}
+          onChange={handleChangeInput}
+          value={ingrValueInput || ''}
         />
-        <button className='form__ingredients--btn' onClick={handleClickAddIngredient}>
+        <button className='form__ingredients--btn' name='ingredient' onClick={handleClickAdd}>
           Añadir
         </button>
       </fieldset>
@@ -164,9 +144,9 @@ const NewRecipeForm = ({
           rows='10'
           placeholder='Lavamos todas las verduras y...'
           value={stepValueInput}
-          onChange={handleChangeStep}
+          onChange={handleChangeInput}
         ></textarea>
-        <button className='form__elaboration--btn' onClick={handleClickAddStep}>
+        <button className='form__elaboration--btn' name='step' onClick={handleClickAdd}>
           Añadir
         </button>
       </fieldset>

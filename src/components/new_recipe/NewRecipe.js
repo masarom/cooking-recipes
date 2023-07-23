@@ -7,15 +7,12 @@ const NewRecipe = ({
   newTitle,
   addInitialComment,
   initialComment,
-  addIngredientValue,
-  addIngredients,
+  handleInputValue,
+  addValue,
   ingrValueInput,
   ingredients,
-  addStepValue,
   stepValueInput,
-  addSteps,
   steps,
-  recipes,
   addNewRecipe,
   addNewImage,
   newImage,
@@ -31,20 +28,13 @@ const NewRecipe = ({
           newTitle={newTitle}
           addInitialComment={addInitialComment}
           initialComment={initialComment}
-          addIngredientValue={addIngredientValue}
-          addIngredients={addIngredients}
+          handleInputValue={handleInputValue}
+          addValue={addValue}
           ingrValueInput={ingrValueInput}
-          ingredients={ingredients}
-          addStepValue={addStepValue}
           stepValueInput={stepValueInput}
-          addSteps={addSteps}
-          steps={steps}
-          recipes={recipes}
           addNewRecipe={addNewRecipe}
           addNewImage={addNewImage}
           newImage={newImage}
-          updateIngredients={updateIngredients}
-          updateSteps={updateSteps}
         />
         <NewRecipePreview
           newTitle={newTitle}

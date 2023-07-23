@@ -47,17 +47,30 @@ const App = () => {
     finalQuote: '¡Que aproveche!',
   });
 
-  //New recipe INGREDIENTS
-  const addIngredientValue = (value) => {
-    setIngrValueInput(value);
-  };
-  const addIngredients = (ingredient) => {
-    if (!ingredients.includes(ingredient)) {
-      const clonedIngredients = [...ingredients];
-      clonedIngredients.push(ingredient);
-      setIngredients(clonedIngredients);
+  //New recipe INPUTS
+  const handleInputValue = (name, value) => {
+    if (name === 'ingredient') {
+      setIngrValueInput(value);
+
+    } else if (name === 'step') {
+      setStepValueInput(value);
     }
   };
+
+  const addValue = (name, value) => {
+    if (name === 'ingredient' && !ingredients.includes(value)) {
+      const clonedIngredients = [...ingredients];
+      clonedIngredients.push(value);
+      setIngredients(clonedIngredients);
+      setIngrValueInput('');
+    } else if (name === 'step' && !steps.includes(value)) {
+      const clonedSteps = [...steps];
+      clonedSteps.push(value);
+      setSteps(clonedSteps);
+      setStepValueInput('');
+    }
+  };
+
   // update Ingredients
   const updateIngredients = (index) => {
     if (index !== -1) {
@@ -65,11 +78,6 @@ const App = () => {
       clonedIngr.splice(index, 1);
       setIngredients(clonedIngr);
     }
-  };
-
-  // New Recipe STEPS
-  const addStepValue = (value) => {
-    setStepValueInput(value);
   };
 
   // update Steps
@@ -81,13 +89,6 @@ const App = () => {
     }
   };
 
-  const addSteps = (step) => {
-    if (!steps.includes(step)) {
-      const clonedSteps = [...steps];
-      clonedSteps.push(step);
-      setSteps(clonedSteps);
-    }
-  };
   // new TITLE
   const addNewTitle = (title) => {
     setNewTitle(title);
@@ -124,9 +125,8 @@ const App = () => {
   const findRecipe = recipes.find((eachRecipe) => eachRecipe.id === recipeId);
 
   return (
-    <div className='body__container'> 
+    <div className='body__container'>
       <section className='body__container--content'>
-      
         <Header />
         <main className='main'>
           <Routes>
@@ -146,13 +146,11 @@ const App = () => {
               element={
                 <NewRecipe
                   /* one input only */
-                  addIngredientValue={addIngredientValue}
+                  handleInputValue={handleInputValue}
+                  addValue={addValue}
                   ingrValueInput={ingrValueInput}
-                  addIngredients={addIngredients}
                   ingredients={ingredients}
-                  addStepValue={addStepValue}
                   stepValueInput={stepValueInput}
-                  addSteps={addSteps}
                   steps={steps}
                   addNewRecipe={addNewRecipe}
                   recipes={recipes}
@@ -171,9 +169,8 @@ const App = () => {
           </Routes>
         </main>
         <Footer />
-      </section> 
+      </section>
     </div>
-  
   );
 };
 
