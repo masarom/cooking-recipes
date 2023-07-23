@@ -1,6 +1,7 @@
 import NewRecipeIngredients from './NewRecipeIngredients';
 import NewRecipeSteps from './NewRecipeSteps';
 import ButtonGoBack from '../buttons/ButtonGoBack';
+import defaultImage from '../../images/defaultImage.jpeg';
 import '../../styles/layout/NewRecipePreview.scss';
 
 const NewRecipePreview = ({ ingredients, steps, newTitle, newImage, initialComment, updateIngredients, updateSteps }) => {
@@ -18,7 +19,9 @@ const NewRecipePreview = ({ ingredients, steps, newTitle, newImage, initialComme
     <>
       <section className='recipe__preview'>
         <h2 className='recipe__preview--title'>{newTitle || 'Título de la receta'}</h2>
-        <div className='recipe__preview--image' style={{ backgroundImage: `url(${newImage})` }}></div>
+        <div className='image--container'>
+          <img className='recipe__preview--image' src={newImage || defaultImage} alt={`Imagen de ${newTitle}`} />
+        </div>
         <p className='recipe__preview--initialComment'>{initialComment || 'Comentario inicial de la receta'}</p>
         <article className='recipe__preview--ingredients'>
           <h2 className='recipe__preview--ingredients-title'>Ingredientes</h2>

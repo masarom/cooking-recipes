@@ -33,27 +33,16 @@
     }
   }
   &--image {
+    display: block;
     width: 85%;
-    height: 150px;
-    background-position: center;
-    background-size: cover;
-    @media all and (min-width: 600px) {
-      width: 80%;
-      height: 200px;
-    }
-    @media all and (min-width: 900px) {
-      height: 250px;
-    }
-    @media all and (min-width: 1024px) {
-      width: 70%;
-      height: 350px;
-    }
+    height: auto;
+    margin: auto;
   }
   &--initialComment {
     padding: 15px 15px 0;
     font-style: italic;
     @media all and (min-width: 768px) {
-      width: 85%;
+      padding: 15px 45px 0;
     }
   }
   &--ingredients,
@@ -68,6 +57,9 @@
       font-size: $large-txt;
       padding-top: 20px;
       margin-left: 15px;
+      @media all and (min-width: 768px) {
+      margin-left: 45px;
+    }
     }
     &-list {
       padding-left: 35px;
@@ -98,7 +90,7 @@
   }
   &--elaboration-list {
     list-style-type: none;
-    padding: 0 15px;
+    padding: 0 35px;
     & .item {
       padding-bottom: 10px;
       text-align: justify;

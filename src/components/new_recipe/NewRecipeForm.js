@@ -1,4 +1,5 @@
 import '../../styles/layout/NewRecipeForm.scss';
+import GetAvatar from '../GetAvatar';
 
 const NewRecipeForm = ({
   addNewTitle,
@@ -47,8 +48,8 @@ const NewRecipeForm = ({
     addInitialComment(ev.target.value);
   };
 
-  const handleChangeImage = (ev) => {
-    addNewImage(ev.target.value);
+  const handleChangeImage = (image) => {
+    addNewImage(image);
   };
 
   const handleClickAddRecipe = (ev) => {
@@ -85,7 +86,8 @@ const NewRecipeForm = ({
         <label className='form__image--title' htmlFor='image'>
           Imagen de presentación
         </label>
-        <input
+        <GetAvatar text='Subir imagen' avatar={newImage} updateAvatar={handleChangeImage} />
+        {/* <input
           type='url'
           className='form__image--input'
           name='image'
@@ -93,7 +95,7 @@ const NewRecipeForm = ({
           placeholder='Ej: https://google.es'
           value={newImage}
           onInput={handleChangeImage}
-        />
+        /> */}
       </fieldset>
       <fieldset className='form__ingredients'>
         <h2 className='form__ingredients--title'>Ingredientes</h2>

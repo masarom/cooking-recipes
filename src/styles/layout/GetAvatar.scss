@@ -1,0 +1,23 @@
+@import '../core/Var';
+
+.get-avatar__label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 150px;
+  color: $white;
+  background-color: $main-clr;
+  height: 31px;
+  border: none;
+  border-radius: 5px;
+  font-size: $small-txt;
+  font-weight: bold;
+  font-family: $scd-title;
+  padding: 0 8px;
+  margin: 10px auto 25px;
+  @media screen and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
