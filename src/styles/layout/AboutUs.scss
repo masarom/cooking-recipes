@@ -1,18 +1,74 @@
 @import '../core/Var';
 
 .aboutUs {
-    padding: 60px 15px 0 15px;
-    &__article{
-        &--title{
-            font-family: $scd-title;
-            font-size: $large-txt;
-            text-align: center;
-        }
-        &--text{
-            font-size: $medium-txt;
-        }
-        &--link{
-            text-decoration: none;
-        }
+  padding: 60px 17px 30px 17px;
+  display: flex;
+  flex-flow: column nowrap;
+  @media all and (min-width: 600px) {
+    padding: 80px 27px 0 27px;
+  }
+  @media all and (min-width: 900px) {
+    padding: 80px 87px 0 87px;
+  }
+  &__article {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: $accent-clr;
+    &--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      padding-bottom: 15px;
+      @media all and (min-width: 900px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
     }
+    &--title {
+      font-family: $scd-title;
+      font-size: $large-txt;
+      text-align: center;
+      width: 85%;
+      padding-bottom: 7px;
+      border-bottom: 1px solid $main-clr;
+      @media all and (min-width: 900px) {
+        border-bottom: none;
+        border-right: 1px solid $main-clr;
+        width: 45%;
+        height: 150px;
+        padding-top: 55px;
+        font-size: $larger-txt;
+        text-align: left;
+      }
+      @media all and (min-width: 1024px) {
+        width: 30%;
+      }
+    }
+    &--image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-image: url('../../images/about-us-2.jpg');
+      background-size: cover;
+      @media all and (min-width: 1024px) {
+        margin-left: 50px;
+      }
+    }
+    &--text {
+      font-size: $medium-txt;
+      & .paragraph {
+        padding-bottom: 10px;
+        text-align: justify;
+      }
+      & .paragraph:first-of-type::first-letter {
+        initial-letter: 3;
+        margin-right: 8px;
+      }
+    }
+  }
 }

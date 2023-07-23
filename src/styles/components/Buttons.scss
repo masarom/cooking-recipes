@@ -1,0 +1,22 @@
+@import '../core/Var';
+
+.button {
+  &__link {
+    display: block;
+    margin: auto;
+    padding-top: 15px;
+    &--btn {
+      text-decoration: none;
+      background-color: $main-clr;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 12px;
+      color: $white;
+      font-family: $scd-title;
+      margin: auto;
+      &:hover {
+        background-color: $accent-clr;
+      }
+    }
+  }
+}
