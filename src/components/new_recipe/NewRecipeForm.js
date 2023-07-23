@@ -14,33 +14,28 @@ const NewRecipeForm = ({
   addNewImage,
   newImage,
 }) => {
+  // add values to states
   const handleChangeInput = (ev) => {
     return handleInputValue(ev.target.name, ev.target.value);
   };
-
-  // Adds ingredient to ingredients (5) array
+  // Adds elements to array
   const handleClickAdd = (ev) => {
     ev.preventDefault();
     if (ev.target.name === 'ingredient') {
       return addValue(ev.target.name, ingrValueInput);
-      
     } else if (ev.target.name === 'step') {
       return addValue(ev.target.name, stepValueInput);
     }
   };
-
   const hangleChangeTitle = (ev) => {
     addNewTitle(ev.target.value);
   };
-
   const handleChangeInitialComment = (ev) => {
     addInitialComment(ev.target.value);
   };
-
   const handleChangeImage = (image) => {
     addNewImage(image);
   };
-
   const handleClickAddRecipe = (ev) => {
     ev.preventDefault();
     return addNewRecipe();

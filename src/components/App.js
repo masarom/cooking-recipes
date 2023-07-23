@@ -1,6 +1,6 @@
 //hooks
 import { Routes, Route, useLocation, matchPath } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 //components
 import Header from './Header';
 import AboutUs from './AboutUs';
@@ -13,11 +13,12 @@ import RecipeDetail from './RecipeDetail';
 import '../styles/App.scss';
 import Footer from './Footer';
 import Hero from './Hero';
+import ls from '../services/localStorage';
 
 const App = () => {
   // states
   // 1 to save all recipes
-  const [recipes, setRecipes] = useState(recipesJSON);
+  const [recipes, setRecipes] = useState(ls.get('recipes',recipesJSON));
   // 2 to save last input ingredient value
   const [ingrValueInput, setIngrValueInput] = useState('');
   // 3 to save ingredients array
@@ -47,11 +48,17 @@ const App = () => {
     finalQuote: '¡Que aproveche!',
   });
 
+  useEffect(() => {
+    if(ls.get('recipes', null) === null){
+      ls.set('recipes', recipes);
+    }
+  }, [recipes])
+
+
   //New recipe INPUTS
   const handleInputValue = (name, value) => {
     if (name === 'ingredient') {
       setIngrValueInput(value);
-
     } else if (name === 'step') {
       setStepValueInput(value);
     }
@@ -115,7 +122,8 @@ const App = () => {
       elaboration: { steps: steps },
     };
     setNewRecipe(clonedNewRecipe);
-    setRecipes([...recipes, clonedNewRecipe]);
+    setRecipes([clonedNewRecipe, ...recipes]);
+    ls.set('recipes', [clonedNewRecipe, ...recipes]);
   };
 
   // DYMANIC ROUTES for RecipeDetail

@@ -4,7 +4,15 @@ import ButtonGoBack from '../buttons/ButtonGoBack';
 import defaultImage from '../../images/defaultImage.jpeg';
 import '../../styles/layout/NewRecipePreview.scss';
 
-const NewRecipePreview = ({ ingredients, steps, newTitle, newImage, initialComment, updateIngredients, updateSteps }) => {
+const NewRecipePreview = ({
+  ingredients,
+  steps,
+  newTitle,
+  newImage,
+  initialComment,
+  updateIngredients,
+  updateSteps,
+}) => {
   const ingredientsLi = ingredients.map((eachIngr, i) => (
     <li key={i} id={i + 1} className='item'>
       <NewRecipeIngredients eachIngr={eachIngr} ingredients={ingredients} updateIngredients={updateIngredients} />

@@ -22,7 +22,6 @@
       &.item0 {
         grid-column: 1 / 13;
         grid-row: 1 / 2;
-        max-height: 400px;
       }
       &.item1 {
         grid-column: 1 / 7;
@@ -43,6 +42,10 @@
       &.item5 {
         grid-column: 1 / 13;
         grid-row: 4 / 5;
+      }
+      &.item6{
+        grid-column: 1 / 13;
+        grid-row: 5 / 6;
       }
     }
     @media all and (min-width: 900px) {

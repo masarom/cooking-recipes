@@ -3,7 +3,6 @@ import '../../styles/layout/NewRecipePreview.scss';
 const NewRecipeSteps = ({ eachStep, steps, updateSteps }) => {
   const handleClickDelete = (ev) => {
     ev.preventDefault();
-    console.log(ev.currentTarget.parentNode.id);
     const findStep = steps.find((step) => step === eachStep);
     const findStepIndex = steps.findIndex((step) => step === findStep);
     updateSteps(findStepIndex);
