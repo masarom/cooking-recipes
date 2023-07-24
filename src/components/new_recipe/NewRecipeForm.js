@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../../styles/layout/NewRecipeForm.scss';
 import GetAvatar from '../GetAvatar';
 
@@ -36,9 +37,14 @@ const NewRecipeForm = ({
   const handleChangeImage = (image) => {
     addNewImage(image);
   };
+  const [message, setMessage] = useState('');
+  const renderMessage = () =>{
+    setMessage(<span>¡Receta creada! Vuelve a Inicio para verla</span>);
+  }
   const handleClickAddRecipe = (ev) => {
     ev.preventDefault();
-    return addNewRecipe();
+    addNewRecipe();
+    renderMessage();
   };
   return (
     <form className='form' onSubmit={handleClickAddRecipe}>
@@ -148,6 +154,7 @@ const NewRecipeForm = ({
       <button className='form__submit' type='submit'>
         Añadir receta
       </button>
+      <span>{message}</span>
     </form>
   );
 };
