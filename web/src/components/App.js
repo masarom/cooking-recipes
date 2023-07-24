@@ -14,11 +14,12 @@ import '../styles/App.scss';
 import Footer from './Footer';
 import Hero from './Hero';
 import ls from '../services/localStorage';
+import objectApi from '../services/api';
 
 const App = () => {
   // states
   // 1 to save all recipes
-  const [recipes, setRecipes] = useState(ls.get('recipes',recipesJSON));
+  const [recipes, setRecipes] = useState([]);
   // 2 to save last input ingredient value
   const [ingrValueInput, setIngrValueInput] = useState('');
   // 3 to save ingredients array
@@ -49,11 +50,38 @@ const App = () => {
   });
 
   useEffect(() => {
-    if(ls.get('recipes', null) === null){
+    if (ls.get('recipes', null) === null) {
+      objectApi.getRecipes().then((recipes) => {
+        console.log(recipes);
+        const cleanData = recipes.results.map((eachRecipe) => ({
+          id: eachRecipe.id,
+          title: eachRecipe.title,
+          idFront: crypto.randomUUID(),
+          image: eachRecipe.image,
+          initialComment: eachRecipe.initialComment,
+          ingredients: {
+            rawList: eachRecipe.ingredients.split(','),
+          },
+          elaboration: {
+            steps: eachRecipe.elaboration.split(','),
+          },
+          finalQuote: '¡Que aproveche!',
+        }));
+        console.log(cleanData);
+        setRecipes(cleanData);
+      });
       ls.set('recipes', recipes);
     }
-  }, [recipes])
+  }, [recipes]);
 
+  useEffect(() => {
+    objectApi.addRecipe(newRecipe).then((dataAPI) => {
+      if (dataAPI.success) {
+        console.log('Ha salido bien' + dataAPI);
+      }
+    });
+    /* ls.set('recipes', [clonedNewRecipe, ...recipes]); */
+  }, [newRecipe, recipes]);
 
   //New recipe INPUTS
   const handleInputValue = (name, value) => {
@@ -123,7 +151,6 @@ const App = () => {
     };
     setNewRecipe(clonedNewRecipe);
     setRecipes([clonedNewRecipe, ...recipes]);
-    ls.set('recipes', [clonedNewRecipe, ...recipes]);
   };
 
   // DYMANIC ROUTES for RecipeDetail

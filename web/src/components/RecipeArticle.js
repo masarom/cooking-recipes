@@ -4,7 +4,6 @@ import '../styles/layout/RecipeArticle.scss';
 
 
 const RecipesArticle = ({eachRecipe, i}) => {
-  console.log(i);
   return (
         <Link to={'receta/' + eachRecipe.id} className='recipe__link'>
           <article className='recipe__article'>
