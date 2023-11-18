@@ -54,7 +54,6 @@ const App = () => {
     }
   }, [recipes])
 
-
   //New recipe INPUTS
   const handleInputValue = (name, value) => {
     if (name === 'ingredient') {

@@ -24,7 +24,7 @@ const AboutUs = () => {
             soporte técnico. También hice el blog por mi hija Carmen, que se independizaba y no sabía cómo cocinar mis
             platos. Ella me decía: “mamá, este es tu legado”.
           </p>
-          <p className='paragraph'>Y por ellas me metí en esta aventura.</p>
+          <p className='paragraph'>Y por ellas me metí en esta aventura. </p>
         </div>
       </article>
       <BtnGoBack />
